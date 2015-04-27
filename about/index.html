@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="theme-next use-motion ">
+<html class="theme-next use-motion theme-next-mist">
 <head>
   
 
@@ -15,6 +15,8 @@
 
 <link rel="stylesheet" type="text/css" href="/css/main.css?v=0.4.2"/>
 
+
+    <meta name="description" content="苦逼地做毕设中..." />
 
 
 
@@ -33,7 +35,7 @@
   
 
   
-    about // 鱼塘
+    about // yzxia's fishpond
   
 </title>
 </head>
@@ -50,7 +52,7 @@
       <span class="logo">
         <i class="icon-logo"></i>
       </span>
-      <span class="site-title">鱼塘</span>
+      <span class="site-title">yzxia's fishpond</span>
   </a>
   <span class="logo-line-after"><i></i></span>
 </h1>
@@ -84,14 +86,6 @@
       </li>
     
       
-      <li class="menu-item menu-item-tags">
-        <a href="/tags">
-          <i class="menu-item-icon icon-tags"></i> <br />
-          标签
-        </a>
-      </li>
-    
-      
       <li class="menu-item menu-item-about">
         <a href="/about">
           <i class="menu-item-icon icon-about"></i> <br />
@@ -113,7 +107,8 @@
   <div id="posts" class="posts-expand">
     
     
-      <p><img src="http://7teagv.com1.z0.glb.clouddn.com/aboutme.png-aboutme" alt=""></p>
+      <p><img src="http://7teagv.com1.z0.glb.clouddn.com/about.png-aboutme" alt=""></p>
+<p>—</p>
 <p>即将入职华为成研所的准码农</p>
 
     
@@ -140,10 +135,10 @@
 
       <div class="site-overview">
         <div class="site-author motion-element">
-          <img class="site-author-image" src="/images/default_avatar.jpg" alt="yzxia" />
+          <img class="site-author-image" src="http://7teagv.com1.z0.glb.clouddn.com/ST.jpg" alt="yzxia" />
           <p class="site-author-name">yzxia</p>
         </div>
-        <p class="site-description motion-element"></p>
+        <p class="site-description motion-element">苦逼地做毕设中...</p>
         <div class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
@@ -160,10 +155,10 @@
           </div>
 
           <div class="site-state-item site-state-tags">
-            <a href="/tags">
+            
               <span class="site-state-item-count">1</span>
               <span class="site-state-item-name">标签</span>
-              </a>
+              
           </div>
 
         </div>
@@ -172,9 +167,21 @@
 
         <div class="links-of-author motion-element">
           
+            
+              <span class="links-of-author-item">
+              <a href="http://weibo.com/woolader" target="_blank">Weibo</a>
+            </span>
+            
+          
         </div>
 
         
+        
+          <div class="cc-license motion-element">
+            <a href="http://creativecommons.org/licenses/by-nc-sa/4.0" class="cc-opacity" target="_blank">
+              <img src="/images/cc-by-nc-sa.svg" alt="Creative Commons" />
+            </a>
+          </div>
         
 
       </div>
@@ -191,7 +198,7 @@
       <div class="footer-inner">
         <div class="copyright">
   
-  &copy; &nbsp; 
+  &copy; &nbsp;  2014 - 
   2015
   <span class="with-love">
     <i class="icon-heart"></i>
@@ -206,7 +213,7 @@
 <div class="theme-info">
   主题 -
   <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-    NexT
+    NexT.Mist
   </a>
 </div>
 
@@ -325,6 +332,9 @@
       $.Velocity.RunSequence([
         { e: $('.brand'), p: { opacity: 1 }, o: { duration: 100 } },
         { e: $('.logo'), p: { opacity: 1, top: 0 }, o: { duration: 50} },
+        
+        { e: $('.logo-line-before i'), p: { translateX: "100%" }, o: { duration: 500, sequenceQueue: false } },
+        { e: $('.logo-line-after i'), p: { translateX: "-100%" }, o: { duration: 500, sequenceQueue: false } },
         
         { e: $('.site-title'), p: { opacity: 1, top: 0 }, o: { duration: 200 } }
       ]);
