@@ -157,7 +157,7 @@
 <p>A,B为与门的输入，Y为输出，字母前的1234对应4个与门，1~16为管脚。GND和Vcc分别为地和电源电压。门电路如下：</p>
 <p><img src="http://7teagv.com1.z0.glb.clouddn.com/logicdiagram.png" alt="门电路"></p>
 <h3 id="CMOS电路">CMOS电路</h3><p>采用四级反相器链，一个与门的CMOS电路图:</p>
-<p><img src="http://7teagv.com1.z0.glb.clouddn.com/电路图.png" alt=""></p>
+<p><img src="http://7teagv.com1.z0.glb.clouddn.com/circuit.png" alt=""></p>
 <h3 id="电气参数，几何参数">电气参数，几何参数</h3><p>电气参数：</p>
 <p>电源电压$V_{dc}=2.5V$，负载电容 $C_0=8pf$</p>
 <p>晶体管几何参数：</p>
@@ -170,7 +170,7 @@
 <p>第四级反相器:<br>$w_p=18u*4=72u$， $w_n=6u*4=24u$</p>
 <h3 id="仿真计算">仿真计算</h3><p>输入阶跃信号a，周期10ns，占空比50%<br>输入阶跃信号b，周期40ns，占空比50%</p>
 <p>仿真结果</p>
-<p><img src="http://7teagv.com1.z0.glb.clouddn.com/仿真结果.png" alt=""></p>
+<p><img src="http://7teagv.com1.z0.glb.clouddn.com/result.png" alt=""></p>
 <h2 id="版图设计">版图设计</h2><p>基于smic 0.13um工艺进行版图设计<br>根据设计规则  $l_n=l_p&gt;=2u$<br>栅长和栅宽按比例加倍</p>
 <p>第一级与非门:<br>$w_p=9u$，$w_n=6u$</p>
 <p>第二级反相器:<br>$w_p=36u$， $w_n=12u$</p>
@@ -849,6 +849,27 @@
 
 
   
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+      processEscapes: true,
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for (i=0; i < all.length; i += 1) {
+      all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+</script>
+
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
 
   
   
