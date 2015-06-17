@@ -20,7 +20,7 @@
 
 
 
-  <meta name="keywords" content="Kindle,电子书," />
+  <meta name="keywords" content="存储," />
 
 
 
@@ -31,7 +31,7 @@
 
 
 
-  <title> 中亚电子书导入Kindle5 // yzxia's fishpond </title>
+  <title> 半导体存储器 // yzxia's fishpond </title>
 </head>
 
 <body>
@@ -118,7 +118,7 @@
           
           
             
-              中亚电子书导入Kindle5
+              半导体存储器
             
           
         </h1>
@@ -126,28 +126,17 @@
 
       <div class="post-meta">
         <span class="post-time">
-          发表于 2015-05-04
+          发表于 2015-06-17
         </span>
 
-        
-          <span class="post-category">
-            &nbsp; | &nbsp; 分类于
-            
-              <a href="/categories/应用/">应用</a>
-
-              
-              
-
-            
-          </span>
         
 
         
           
             <span class="post-comments-count">
             &nbsp; | &nbsp;
-            <a href="/2015/05/04/中亚电子书导入Kindle5/#comments" >
-              <span class="post-comments-count ds-thread-count" data-thread-key="2015/05/04/中亚电子书导入Kindle5/"></span>
+            <a href="/2015/06/17/半导体存储器/#comments" >
+              <span class="post-comments-count ds-thread-count" data-thread-key="2015/06/17/半导体存储器/"></span>
             </a>
           </span>
           
@@ -161,15 +150,58 @@
       
 
       
-        <p>自从kindle人社区挂了重开之后取消了资源分享，有些找不到的书只有在亚马逊上买了。当初买的是美版的kindle5，国内亚马逊的书无法推送(仅支持kpw,kpw2)。如果买了<strong>中国亚马逊</strong>的kindle电子书，可以利用<strong>Calibre的插件去除DRM保护</strong>之后放到kindle5里。</p>
-<h1 id="软件安装">软件安装</h1><p>需要下载的软件有：<a href="http://calibre-ebook.com/download" target="_blank" rel="external">Calibre</a>、<a href="https://github.com/psyrendust/dedrm-ebook-tools/releases" target="_blank" rel="external">DeDRM插件</a>、<a href="https://www.amazon.cn/gp/digital/fiona/kcp-landing-page?ie=UTF8&amp;ref_=kcp_pc_mkt_lnd" target="_blank" rel="external">Kindle for PC</a></p>
-<p>安装完成<a href="http://calibre-ebook.com/download" target="_blank" rel="external">Calibre</a>之后， 进入<a href="https://github.com/psyrendust/dedrm-ebook-tools/releases" target="_blank" rel="external">DeDRM插件</a>页面，下载<code>Source code (zip)</code>，解压之后在如下进入如下目录：</p>
-<pre><code>dedrm-ebook-tools-<span class="number">6.0</span>.<span class="number">4</span><span class="string">\DeDRM_calibre_plugin\</span>
-</code></pre><p>里面<code>DeDRM_plugin.zip</code>就是插件包</p>
-<p>打开Calibre，点击首选项（或者快捷键Ctrl+P），点击高级选项下的插件，点击“从文件加载插件”，选择<code>DeDRM_plugin.zip</code>。如果有警告可以忽略，之后重启Calibre，插件就算安装完了。</p>
-<p>然后下载安装<a href="https://www.amazon.cn/gp/digital/fiona/kcp-landing-page?ie=UTF8&amp;ref_=kcp_pc_mkt_lnd" target="_blank" rel="external">Kindle for PC</a></p>
-<h1 id="导入电子书">导入电子书</h1><p>在中国亚马逊上买了电子书之后，用同一个帐号登录<strong>Kindle for PC</strong>，打开<strong>Kindle for PC</strong>接受中国亚马逊的推送，收到的电子书可以在菜单栏的 <code>工具-&gt;选项-&gt;内容</code> 处查看存放位置，此时为加密的azw文件。</p>
-<p><strong>去除DRM保护</strong><br>将接受的azw文件添加到Calibre之后插件可以自动产生已解除DRM保护的awz3文件，打开Calire右侧的<code>路径:    点击打开</code>找到存放位置，之后用usb传到Kindle里面就OK了~</p>
+        <h1 id="RAM和ROM">RAM和ROM</h1><p><strong>RAM（Random Access Memory，随机存取存储器）</strong>，传统的RAM可分为<strong>SRAM（动态随机存取存储器）</strong>和 <strong>DRAM（静态随机存取存储器）</strong>。</p>
+<ul>
+<li><p>SRAM用作CPU高速缓存，速度快，成本高；采用<strong>双稳态电路</strong>来存储数据，无须刷新，1bit需要4-6个MOS管。</p>
+</li>
+<li><p>DRAM用作计算机主存（内存）和GPU显存。采用电容存储数据，为避免电荷泄漏导致出错，需要刷新电路，1bit仅需一个MOS管和一个电容。<br>电容的刷新频率限制了DRAM的高频性能，而后发展出了<strong>SDRAM</strong>（Synchronous Dynamic Random Access Memory，同步动态随机存储器）以及<strong>DDR SDRAM</strong>（Double Data Rate SDRAM），使得RAM和CPU共享时钟周期，且在时钟上升沿和下降沿都能传输数据，最新的主流内存条采用了第三代DDR3能达到1600MHz主频。</p>
+</li>
+</ul>
+<p>SRAM和DRAM都有<strong>断电易失</strong>的特性，断电后不能存储数据。而随着技术的发展，也出现了新型的具有非易失性的RAM：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">存储器</th>
+<th style="text-align:left">工作机理</th>
+<th style="text-align:left">特点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">FeRAM</td>
+<td style="text-align:left">通过铁电晶体的电滞回特性存储数据</td>
+<td style="text-align:left">高写入速度（信息写入速度比普通EEPROM快104倍以上）、低写功耗（写功耗为普通EEPROM快1/103）、更长的工作寿命以及较强的抗辐射能等</td>
+</tr>
+<tr>
+<td style="text-align:left">MRAM</td>
+<td style="text-align:left">采用两块纳米级铁磁体，在界面上用一个非磁金属层或绝缘层来夹持一个金属导体的结构。通过改变两块铁磁体的方向，下面的导体的磁致电阻就会发生变化，反之亦然</td>
+<td style="text-align:left">拥有静态随机存储器（SRAM）的高速读取写入能力，以及动态随机存储器（DRAM）的高集成度，理论上可以无限次地重复写入</td>
+</tr>
+<tr>
+<td style="text-align:left">RRAM</td>
+<td style="text-align:left">采用金属—绝缘介质—金属（MIM）的三明治结构，通过绝缘介质的电阻转变进行工作</td>
+<td style="text-align:left">国际上最近兴起的新型存储器，在近两年内得到国际重要大公司同时力推，包括三星、SHARP、IBM、NEC 等。其同样具有高速、低功耗的特点。</td>
+</tr>
+</tbody>
+</table>
+<p><strong>ROM（Read-Only Memory，只读存储器）</strong>，早期是用于存储计算机BIOS数据，读取比RAM慢，数据一次写入且不可更改；断电时数据能保存，即非易失性。所有的ROM都具有非易失性，即非易失性存储器（NVM，NonVolatile Memory）。</p>
+<p>ROM发展到现在实现了可多次擦除和写入，常用的是<strong>紫外光擦除</strong>的EPROM 和 <strong>电擦除</strong>的EEPROM。Flash Memory（闪存）是一种特殊结构的EEPROM。</p>
+<blockquote>
+<p>读取速度： SRAM &gt; DRAM &gt; Flash Memory &gt; 磁盘</p>
+</blockquote>
+<h1 id="EEPROM">EEPROM</h1><p>目前所采用的EEPROM结构为浮栅隧道氧化物结构—FLOTOX（Floating gate Tunnel Oxide）<br><img src="http://7teagv.com1.z0.glb.clouddn.com/EEPROM.png" alt="浮栅EEPROM"></p>
+<ul>
+<li>浮置栅(Float Gate—FG)“浮置”于氧化层（ONO）中，与其它部分均不相连，处于完全绝缘的状态。由于浮栅被不导电的氧化层完全绝缘，因此其上电荷可以永久存在，实现了数据的永久存储。</li>
+<li>控制栅(Control Gate—CG)用于EEPROM的状态控制。</li>
+<li>选择栅（Select Gate—SG）主要用于防止浮栅在擦除和编程数据时，对存储单元阵列中连接同一根字线的其他存储单元进行误操作，提高擦、写的可靠性，并保护隧道区超薄氧化层。</li>
+</ul>
+<p>在浮置栅和漏端（Drain）之间的氧化层极薄（≈10nm），该区域称为隧道区。基于FN隧穿机理，施加高压电场时，可通过该隧道区把电子注入到浮置栅或把电子排出浮置栅，从而影响存储单元的阈值电压以实现数据改写。</p>
+<p>EEPROM一般制作容量较小，常用在低成本和低功耗的产品中作为数据存储器，如无源RFID标签等。</p>
+<h1 id="Flash">Flash</h1><p>闪存（Flash，全名Flash EEPROM Memory）是EEPROM的变种。Flash的擦除过程中是在源极加正电压，利用隧穿效应将浮栅中的电子抽出到源极。单元的源极都连在一起加正压擦除，在读写方式上无法像EEPROM一样进行单字节操作，而只能进行块(block)擦除，并且每次须先将整个块中的数据擦除后再写入，在Flash结构中一般也没有选择栅SG。</p>
+<ul>
+<li>NOR Flash，读取速度较快且能直接运行代码，但是擦除和写入速度远小于Nand Flash，容量成本也比Nand Flash高，一般NOR Flash容量较小，常用来存放操作系统启动的信息。</li>
+<li>Nand Flash，容量成本低，擦除写入快，适合存储数据。由Nand Flash组成的固态硬盘（SSD）在一定的应用情景下能代替普通的机械硬盘。</li>
+</ul>
 
       
     </div>
@@ -178,9 +210,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Kindle/"> #Kindle </a>
-          
-            <a href="/tags/电子书/"> #电子书 </a>
+            <a href="/tags/存储/"> #存储 </a>
           
         </div>
       
@@ -189,13 +219,11 @@
         <div class="post-nav">
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2015/05/11/结束一段感情/">结束一段感情</a>
-            
           </div>
 
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2015/04/29/一篇随笔/">四月奋进小组</a>
+              <a href="/2015/05/11/结束一段感情/">结束一段感情</a>
             
           </div>
         </div>
@@ -211,8 +239,8 @@
     
       <div class="comments" id="comments">
         
-          <div class="ds-thread" data-thread-key="2015/05/04/中亚电子书导入Kindle5/"
-               data-title="中亚电子书导入Kindle5" data-url="http://yoursite.com/2015/05/04/中亚电子书导入Kindle5/">
+          <div class="ds-thread" data-thread-key="2015/06/17/半导体存储器/"
+               data-title="半导体存储器" data-url="http://yoursite.com/2015/06/17/半导体存储器/">
           </div>
         
       </div>
@@ -304,7 +332,7 @@
           <div class="post-toc">
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#软件安装"><span class="nav-number">1.</span> <span class="nav-text">软件安装</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#导入电子书"><span class="nav-number">2.</span> <span class="nav-text">导入电子书</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#RAM和ROM"><span class="nav-number">1.</span> <span class="nav-text">RAM和ROM</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#EEPROM"><span class="nav-number">2.</span> <span class="nav-text">EEPROM</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Flash"><span class="nav-number">3.</span> <span class="nav-text">Flash</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>
