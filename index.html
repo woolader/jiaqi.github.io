@@ -155,7 +155,10 @@
 
       
         
-          <h1 id="RAM">RAM</h1><p><strong>RAM（Random Access Memory，随机存取存储器）</strong>，传统的RAM可分为<strong>SRAM（动态随机存取存储器）</strong>和 <strong>DRAM（静态随机存取存储器）</strong>。</p>
+          <p>毕设写完了，翻译和论文中涉及了一些半导体存储器的资料，在此顺便整理一下。半导体存储器也是IC发展的一个重要分支，从计算机诞生最初的内存RAM和ROM发展而来，RAM的速度越来越快，而ROM也发展到可以作为大容量数据的存储介质。</p>
+<p><img src="http://7teagv.com1.z0.glb.clouddn.com/rom%E5%AE%B6%E6%97%8F.png-suit" alt="此处输入图片的描述"></p>
+<hr>
+<h1 id="RAM">RAM</h1><p><strong>RAM（Random Access Memory，随机存取存储器）</strong>，传统的RAM可分为<strong>SRAM（动态随机存取存储器）</strong>和 <strong>DRAM（静态随机存取存储器）</strong>。</p>
 <ul>
 <li><p>SRAM用作CPU高速缓存，速度快，成本高；采用<strong>双稳态电路</strong>来存储数据，无须刷新，1bit需要4-6个MOS管。</p>
 </li>
@@ -190,8 +193,8 @@
 </tbody>
 </table>
 <hr>
-<h1 id="ROM">ROM</h1><p><strong>ROM（Read-Only Memory，只读存储器）</strong>，早期是用于存储计算机BIOS数据，读取比RAM慢，数据一次写入且不可更改；断电时数据能保存，即非易失性。所有的ROM都具有非易失性，即非易失性存储器（NVM，NonVolatile Memory）。</p>
-<p>ROM发展到现在实现了可多次擦除和写入，常用的是<strong>紫外光擦除</strong>的EPROM 和 <strong>电擦除</strong>的<strong>EEPROM</strong>，并且发展出了<strong>Flash Memory</strong>（闪存）。</p>
+<h1 id="ROM">ROM</h1><p><strong>ROM（Read-Only Memory，只读存储器）</strong>，早期是用于存储计算机BIOS数据，数据在ROM器件制造过程中写入（Mask ROM），读取比RAM慢，数据一次写入且不可更改；断电时数据能保存，即非易失性。所有的ROM都具有非易失性，即非易失性存储器（NVM，NonVolatile Memory）。</p>
+<p>ROM发展到现在实现了可多次擦除和写入，可在系统或终端应用级别进行电写入（PROM，EPROM，EEPROM），常用的是<strong>电擦除</strong>的<strong>EEPROM</strong>，并且发展出了<strong>Flash Memory</strong>（闪存）。</p>
 <h2 id="EEPROM">EEPROM</h2><p><strong>结构：</strong><br>目前所采用的EEPROM结构为浮栅隧道氧化物结构—FLOTOX（Floating gate Tunnel Oxide）<br><img src="http://7teagv.com1.z0.glb.clouddn.com/EEPROM.png" alt="浮栅EEPROM"></p>
 <ul>
 <li>浮置栅(Float Gate—FG)“浮置”于氧化层（ONO）中，与其它部分均不相连，处于完全绝缘的状态。由于浮栅被不导电的氧化层完全绝缘，因此其上电荷可以永久存在，实现了数据的永久存储。</li>
@@ -200,9 +203,9 @@
 </ul>
 <p>在浮置栅和漏端（Drain）之间的氧化层极薄（≈10nm），该区域称为隧道区。基于FN隧穿机理，施加高压电场时，可通过该隧道区把电子注入到浮置栅或把电子排出浮置栅，从而影响存储单元的阈值电压以实现数据改写。</p>
 <p><strong>特点</strong><br>EEPROM实现了可多次擦除和写入，速度远不及RAM但是容量成本低。最初的任天堂GBA卡带就是用EEPROM制作的，这种EEPROM游戏卡本身就是内存，可以直接运行，游戏机也不需要再自备内存了。如今的EEPROM也适用于各种低功耗和低成本的应用，如RFID标签等。</p>
-<h2 id="Flash">Flash</h2><p>闪存（Flash，全名Flash EEPROM Memory）是EEPROM的变种。Flash的擦除过程中是在源极加正电压，利用隧穿效应将浮栅中的电子抽出到源极。单元的源极都连在一起加正压擦除，在读写方式上无法像EEPROM一样进行单字节操作，而只能进行块(block)擦除，并且每次须先将整个块中的数据擦除后再写入，在Flash结构中一般也没有选择栅SG。Flash都是块擦除，而根据<strong>读写方式</strong>不同可分为NOR Flash和Nand Flash：</p>
+<h2 id="Flash">Flash</h2><p><strong>闪存（Flash，全名Flash EEPROM Memory）是EEPROM的变种</strong>。Flash的擦除过程中是在源极加正电压，利用隧穿效应将浮栅中的电子抽出到源极。单元的源极都连在一起加正压擦除，在读写方式上无法像EEPROM一样进行单字节操作，而只能进行块(block)擦除，并且每次须先将整个块中的数据擦除后再写入，在Flash结构中一般也没有选择栅SG。Flash都是块擦除，而根据<strong>读写方式</strong>不同可分为NOR Flash和Nand Flash：</p>
 <p><strong>NOR Flash</strong><br>Intel于1988年首先开发出NOR Flash 技术，NOR Flash的存储单元并联，<strong>支持随机读取</strong>，读取速度较快且能直接运行代码，也即是可<strong>作为内存</strong>使用。与EEPROM相比，NOR Flash的擦除和写入速度慢，但容量成本也较EERPOM低。<br>一般NOR Flash常用来存放操作系统启动的信息，以及某些有<strong>读取操作需求</strong>而对写入和擦除操作要求较低的场合（对于GBA烧录卡，NOR Flash出现后取代了EEPROM）。</p>
-<p><strong>Nand Flash</strong><br>1989年，东芝公司开发了NAND Flash结构，容量成本低，擦除写入快，适合存储数据。常见的用途如U盘，由Nand Flash组成的固态硬盘（SSD）在一定的应用情景下能代替普通的机械硬盘。</p>
+<p><strong>Nand Flash</strong><br>1989年，东芝公司发表了NAND Flash结构，容量成本低，擦除写入快，适合存储数据。常见的用途如U盘，由Nand Flash组成的固态硬盘（SSD）在一定的应用情景下能代替普通的机械硬盘。<br>Nand Flash的集成度非常高，西电附件的<strong>三星（中国）半导体</strong>生产的Nand Flash存储芯片制程已达10纳米级。</p>
 <p><strong>性能比较:</strong></p>
 <blockquote>
 <p>flash闪存是非易失存储器，可以对称为块的存储器单元块进行擦写和再编程。任何flash器件的写入操作只能在空或已擦除的单元内进行，所以大多数情况下，在进行写入操作之前必须先执行擦除。NAND器件执行擦除操作是十分简单的，而NOR则要求在进行擦除前先要将目标块内所有的位都写为0。 执行擦除时块尺寸的不同进一步拉大了NOR和NADN之间的性能差距.</p>
@@ -211,9 +214,7 @@
 <p><strong>接口：</strong><br> NOR flash带有SRAM接口，有足够的地址引脚来寻址，可以很容易地存取其内部的每一个字节。</p>
 <p>NAND器件使用复杂的I/O口来串行地存取数据，共用8位总线（各个产品或厂商的方法可能各不相同）。8个引脚用来传送控制、地址和数据信息。NAND读和写操作采用512字节的页和32KB的块为单位，这一点有点像硬盘管理此类操作，很自然地，基于NAND的存储器就可以取代硬盘或其他块设备。</p>
 <p><strong>容量和成本：</strong><br>NAND flash的单元尺寸几乎是NOR器件的一半，由于生产过程更为简单，NAND结构可以在给定的模具尺寸内提供更高的容量，也就相应地降低了价格，大概只有NOR的十分之一。</p>
-<hr>
-<p><strong>总结：</strong></p>
-<blockquote>
+<h1 id="总结：">总结：</h1><blockquote>
 <p>读取速度： SRAM &gt;&gt; DRAM &gt;&gt; EEPROM &gt; NOR Flash &gt; Nand Flash &gt; 磁盘</p>
 </blockquote>
 <ul>
