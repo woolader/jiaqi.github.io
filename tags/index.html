@@ -1,87 +1,130 @@
 <!doctype html>
-<html class="theme-next use-motion theme-next-mist">
-<head>
+
+
+
   
 
-<meta charset="UTF-8"/>
+
+<html class="theme-next pisces use-motion">
+<head>
+  <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
 
 
-
-
-
-  <link rel="stylesheet" type="text/css" href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5"/>
-
-
-
-
-<link rel="stylesheet" type="text/css" href="/css/main.css?v=0.4.3"/>
-
-
-    <meta name="description" content="滚回成都啦" />
-
-
-
-  <meta name="keywords" content="Hexo,next" />
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
 
 
 
 
 
-  <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.3" />
+
+
+
+
+
+
+
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css"/>
+
+
+
+
+  <link href="//fonts.googleapis.com/css?family=Lato:300,400,700,400italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=0.5.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=0.5.0" />
+
+
+
+
+
+
+<meta name="description" content="郫县林宥嘉就是我！">
+<meta property="og:type" content="website">
+<meta property="og:title" content="All tags">
+<meta property="og:url" content="http://yoursite.com/tags/index.html">
+<meta property="og:site_name" content="yzxia's fishpond">
+<meta property="og:description" content="郫县林宥嘉就是我！">
+<meta property="og:updated_time" content="2015-05-04T12:08:07.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="All tags">
+<meta name="twitter:description" content="郫县林宥嘉就是我！">
 
 
 
 <script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
   var CONFIG = {
-    scheme: 'Mist',
-    analytics: {
-      google: ''
-    },
-    sidebar: 'hide'
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: '博主'
+    }
   };
 </script>
-
-
-
 
   <title>
   
 
   
-    标签 // yzxia's fishpond
+    标签 | yzxia's fishpond
   
 </title>
 </head>
 
-<body>
-  <!--[if lte IE 8]>
-  <div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;margin:0 auto;'>
-    <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
-      <img src="http://7u2nvr.com1.z0.glb.clouddn.com/picouterie.jpg" border="0" height="42" width="820"
-           alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today or use other browser ,like chrome firefox safari."
-           style='margin-left:auto;margin-right:auto;display: block;'/>
-    </a>
-  </div>
-<![endif]-->
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
 
-  <div class="container one-column ">
+  
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left  ">
     <div class="headband"></div>
 
-    <div id="header" class="header">
-      <div class="header-inner">
-        <h1 class="site-meta">
-  <span class="logo-line-before"><i></i></span>
-  <a href="/" class="brand">
-      <span class="logo">
-        <i class="icon-logo"></i>
-      </span>
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
       <span class="site-title">yzxia's fishpond</span>
-  </a>
-  <span class="logo-line-after"><i></i></span>
-</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle"></p>
+</div>
 
 <div class="site-nav-toggle">
   <button>
@@ -91,7 +134,7 @@
   </button>
 </div>
 
-<div class="site-nav">
+<nav class="site-nav">
   
 
   
@@ -99,25 +142,44 @@
       
         
         <li class="menu-item menu-item-home">
-          <a href="/">
-            <i class="menu-item-icon icon-home"></i> <br />
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-home fa-fw"></i> <br />
+            
             首页
           </a>
         </li>
       
         
         <li class="menu-item menu-item-archives">
-          <a href="/archives">
-            <i class="menu-item-icon icon-archives"></i> <br />
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-archive fa-fw"></i> <br />
+            
             归档
           </a>
         </li>
       
         
         <li class="menu-item menu-item-tags">
-          <a href="/tags">
-            <i class="menu-item-icon icon-tags"></i> <br />
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-tags fa-fw"></i> <br />
+            
             标签
+          </a>
+        </li>
+      
+
+      
+      
+      
+        <li class="menu-item menu-item-search">
+          <a href="#" class="st-search-show-outputs">
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
           </a>
         </li>
       
@@ -127,10 +189,10 @@
   
     <div class="site-search">
       
-  
-<form class="site-search-form">
+  <form class="site-search-form">
   <input type="text" id="st-search-input" class="st-search-input st-default-search-input" />
 </form>
+
 <script type="text/javascript">
   (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
     (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
@@ -140,19 +202,20 @@
   _st('install', '-DewUpWQWtrxHk5zGmf2','2.0.0');
 </script>
 
-<div class="site-search-toggle"></div>
+
+
     </div>
   
-</div>
+</nav>
 
+ </div>
+    </header>
 
-      </div>
-    </div>
-
-    <div id="main" class="main">
+    <main id="main" class="main">
       <div class="main-inner">
-        <div id="content" class="content">
-          
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
 
   <div id="posts" class="posts-expand">
     
@@ -169,13 +232,23 @@
   </div>
 
 
-        </div>
+          </div>
+          
 
-        
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="tags/index.html"
+           data-title="All tags" data-url="http://yoursite.com/tags/index.html">
       </div>
+    
+  </div>
 
 
-      
+        </div>
+        
+          
   
   <div class="sidebar-toggle">
     <div class="sidebar-toggle-line-wrap">
@@ -185,18 +258,22 @@
     </div>
   </div>
 
-  <div id="sidebar" class="sidebar">
+  <aside id="sidebar" class="sidebar">
     <div class="sidebar-inner">
 
       
 
-      <div class="site-overview">
-        <div class="site-author motion-element">
-          <img class="site-author-image" src="http://7teagv.com1.z0.glb.clouddn.com/ST.jpg" alt="yzxia" />
-          <p class="site-author-name">yzxia</p>
+      
+
+      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="http://7teagv.com1.z0.glb.clouddn.com/ST.jpg"
+               alt="yzxia" />
+          <p class="site-author-name" itemprop="name">yzxia</p>
+          <p class="site-description motion-element" itemprop="description">郫县林宥嘉就是我！</p>
         </div>
-        <p class="site-description motion-element">滚回成都啦</p>
-        <div class="site-state motion-element">
+        <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
               <span class="site-state-item-count">9</span>
@@ -218,7 +295,7 @@
               </a>
           </div>
 
-        </div>
+        </nav>
 
         
 
@@ -226,16 +303,28 @@
           
             
               <span class="links-of-author-item">
-              <a href="http://weibo.com/woolader" target="_blank">Weibo</a>
-            </span>
+                <a href="http://weibo.com/woolader" target="_blank">
+                  
+                    <i class="fa fa-globe"></i> 微博
+                  
+                </a>
+              </span>
             
               <span class="links-of-author-item">
-              <a href="http://www.zhihu.com/people/xia-yu-zhe" target="_blank">ZhiHu</a>
-            </span>
+                <a href="http://www.zhihu.com/people/xia-yu-zhe" target="_blank">
+                  
+                    <i class="fa fa-globe"></i> Zhihu
+                  
+                </a>
+              </span>
             
               <span class="links-of-author-item">
-              <a href="http://www.douban.com/people/yzxia/" target="_blank">DouBan</a>
-            </span>
+                <a href="http://www.douban.com/people/yzxia/" target="_blank">
+                  
+                    <i class="fa fa-globe"></i> 豆瓣
+                  
+                </a>
+              </span>
             
           
         </div>
@@ -246,27 +335,29 @@
         <div class="links-of-author motion-element">
           
         </div>
-        
-      </div>
+
+      </section>
 
       
 
     </div>
-  </div>
+  </aside>
 
 
-    </div>
+        
+      </div>
+    </main>
 
-    <div id="footer" class="footer">
+    <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">
+        <div class="copyright" >
   
-  &copy; &nbsp;  2014 - 
-  2016
+  &copy;  2014 - 
+  <span itemprop="copyrightYear">2016</span>
   <span class="with-love">
-    <i class="icon-heart"></i>
+    <i class="icon-next-heart fa fa-heart"></i>
   </span>
-  <span class="author">yzxia</span>
+  <span class="author" itemprop="copyrightHolder">yzxia</span>
 </div>
 
 <div class="powered-by">
@@ -276,77 +367,99 @@
 <div class="theme-info">
   主题 -
   <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-    NexT.Mist
+    NexT.Pisces
   </a>
 </div>
 
 
 
       </div>
-    </div>
+    </footer>
 
     <div class="back-to-top"></div>
   </div>
 
+  
+
+
+  
+
+
+
   <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
 
-  
-  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
 
-  
-  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
-  <script type="text/javascript" src="/js/fancy-box.js?v=0.4.3"></script>
-
-
-  <script type="text/javascript" src="/js/helpers.js?v=0.4.3"></script>
-  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
 
   <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
+
   <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
 
-  <script type="text/javascript" src="/js/motion_global.js?v=0.4.3" id="motion.global"></script>
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=0.5.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=0.5.0"></script>
 
 
 
-  <script type="text/javascript" src="/js/search-toggle.js"></script>
+  
+  
 
+
+  <script type="text/javascript" src="/js/src/affix.js?v=0.5.0"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=0.5.0"></script>
+
+
+
+  
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=0.5.0"></script>
+
+
+
+  
+
+  
+    
   
 
   <script type="text/javascript">
-    $(document).ready(function () {
-      if (CONFIG.sidebar === 'always') {
-        displaySidebar();
-      }
-    });
+    var duoshuoQuery = {short_name:"yzxia"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
   </script>
 
   
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Config({
-    tex2jax: {
-      inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
-      processEscapes: true,
-      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-    }
-  });
-</script>
-
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Queue(function() {
-    var all = MathJax.Hub.getAllJax(), i;
-    for (i=0; i < all.length; i += 1) {
-      all[i].SourceElement().parentNode.className += ' has-jax';
-    }
-  });
-</script>
-
-<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+  
 
 
+
+
+
+  
   
 
   
   
+
 
 </body>
 </html>
