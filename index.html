@@ -5,10 +5,10 @@
   
 
 
-<html class="theme-next pisces use-motion">
+<html class="theme-next pisces use-motion" lang="zh-Hans">
 <head>
   <meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
 
@@ -27,18 +27,45 @@
 
 
 
-  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css"/>
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
 
 
 
 
-  <link href="//fonts.googleapis.com/css?family=Lato:300,400,700,400italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
 
 
 
-<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
 
-<link href="/css/main.css?v=0.5.0" rel="stylesheet" type="text/css" />
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
   <meta name="keywords" content="Hexo, NexT" />
@@ -50,7 +77,7 @@
 
 
 
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=0.5.0" />
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
 
 
 
@@ -69,19 +96,35 @@
 
 
 
-<script type="text/javascript" id="hexo.configuration">
+<script type="text/javascript" id="hexo.configurations">
   var NexT = window.NexT || {};
   var CONFIG = {
+    root: '/',
     scheme: 'Pisces',
     sidebar: {"position":"left","display":"post"},
     fancybox: true,
     motion: true,
     duoshuo: {
-      userId: 0,
+      userId: '0',
       author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
     }
   };
 </script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/"/>
+
+
+
+
 
   <title> yzxia's fishpond </title>
 </head>
@@ -89,6 +132,8 @@
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
 
   
+
+
 
 
 
@@ -133,15 +178,25 @@
   
 
   
-    <ul id="menu" class="menu menu-left">
+    <ul id="menu" class="menu">
       
         
         <li class="menu-item menu-item-home">
           <a href="/" rel="section">
             
-              <i class="menu-item-icon fa fa-home fa-fw"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
             首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
           </a>
         </li>
       
@@ -149,7 +204,7 @@
         <li class="menu-item menu-item-archives">
           <a href="/archives" rel="section">
             
-              <i class="menu-item-icon fa fa-archive fa-fw"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
             归档
           </a>
@@ -159,18 +214,28 @@
         <li class="menu-item menu-item-tags">
           <a href="/tags" rel="section">
             
-              <i class="menu-item-icon fa fa-tags fa-fw"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
             
             标签
           </a>
         </li>
       
+        
+        <li class="menu-item menu-item-mypage">
+          <a href="/myPage" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
+            
+            myPage
+          </a>
+        </li>
+      
 
       
-      
-      
         <li class="menu-item menu-item-search">
-          <a href="#" class="st-search-show-outputs">
+          
+            <a href="javascript:;" class="st-search-show-outputs">
+          
             
               <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
             
@@ -203,6 +268,8 @@
   
 </nav>
 
+
+
  </div>
     </header>
 
@@ -212,25 +279,9 @@
           <div id="content" class="content">
             
   <section id="posts" class="posts-expand">
-
-    
-
-    
-    
-      
-      
-        
-        
-        
-      
-
-      
-    
-
     
       
 
-  
   
 
   
@@ -238,6 +289,20 @@
   
 
   <article class="post post-type-picture " itemscope itemtype="http://schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/11/20/picture/">
+
+  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="yzxia">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="http://7teagv.com1.z0.glb.clouddn.com/ST.jpg">
+  </span>
+
+  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="yzxia's fishpond">
+    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+      <img style="display:none;" itemprop="url image" alt="yzxia's fishpond" src="">
+    </span>
+  </span>
 
     
 
@@ -250,12 +315,21 @@
       
         
           
-            <a href="/2016/02/16/重庆/"><div class="group-picture"><div class="group-picture-container"><div class="group-picture-row"><div class="group-picture-column" style="width: 100%;"><img src="http://7teagv.com1.z0.glb.clouddn.com/2016-02-16-IMG_0612%20-1-.jpg" alt=""></div></div><div class="group-picture-row"><div class="group-picture-column" style="width: 33.333333333333336%;"><img src="http://7teagv.com1.z0.glb.clouddn.com/2016-02-16-IMG_0611%20-1-.jpg" alt=""></div><div class="group-picture-column" style="width: 33.333333333333336%;"><img src="http://7teagv.com1.z0.glb.clouddn.com/2016-02-16-IMG_0617.jpg" alt=""></div><div class="group-picture-column" style="width: 33.333333333333336%;"><img src="http://7teagv.com1.z0.glb.clouddn.com/2016-02-16-FullSizeRender-1-%20-1-.jpg" alt=""></div></div></div></div>
+            <a href="/2016/11/20/picture/"><div class="group-picture"><div class="group-picture-container"><div class="group-picture-row"><div class="group-picture-column" style="width: 100%;"><img src="http://7teagv.com1.z0.glb.clouddn.com/photo/chongqing_01.jpg" alt=""></div></div><div class="group-picture-row"><div class="group-picture-column" style="width: 33.333333333333336%;"><img src="http://7teagv.com1.z0.glb.clouddn.com/photo/chongqing_02.jpg" alt=""></div><div class="group-picture-column" style="width: 33.333333333333336%;"><img src="http://7teagv.com1.z0.glb.clouddn.com/photo/chongqing_03.jpg" alt=""></div><div class="group-picture-column" style="width: 33.333333333333336%;"><img src="http://7teagv.com1.z0.glb.clouddn.com/photo/xi%27an_01.webp" alt=""></div></div></div></div>
 </a>
           
         
       
     </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
 
     <footer class="post-footer">
       
@@ -274,6 +348,129 @@
       
 
   
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/11/20/weather环形图/">
+
+  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="yzxia">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="http://7teagv.com1.z0.glb.clouddn.com/ST.jpg">
+  </span>
+
+  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="yzxia's fishpond">
+    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+      <img style="display:none;" itemprop="url image" alt="yzxia's fishpond" src="">
+    </span>
+  </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/11/20/weather环形图/" itemprop="url">
+                  weather环形图
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              <time title="Дата создания записи" itemprop="dateCreated datePublished" datetime="2016-11-20T16:00:39+08:00">
+                2016-11-20
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <a href="/2016/11/20/weather环形图/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/11/20/weather环形图/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>&lt;%- js(‘/source/myPage/weather/weather.js’) %&gt;<br>&lt;%- js(‘<a href="http://cdn.hcharts.cn/jquery/jquery-1.8.3.min.js" target="_blank" rel="external">http://cdn.hcharts.cn/jquery/jquery-1.8.3.min.js</a>‘) %&gt;<br>&lt;%- js(‘<a href="http://cdn.hcharts.cn/jquery/jquery-1.8.3.min.js" target="_blank" rel="external">http://cdn.hcharts.cn/jquery/jquery-1.8.3.min.js</a>‘) %&gt;</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
   
 
   
@@ -281,6 +478,20 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/01/20/告白/">
+
+  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="yzxia">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="http://7teagv.com1.z0.glb.clouddn.com/ST.jpg">
+  </span>
+
+  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="yzxia's fishpond">
+    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+      <img style="display:none;" itemprop="url image" alt="yzxia's fishpond" src="">
+    </span>
+  </span>
 
     
       <header class="post-header">
@@ -302,13 +513,19 @@
 
         <div class="post-meta">
           <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-01-20T00:09:35+08:00" content="2016-01-20">
-              2016-01-20
-            </time>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              <time title="Дата создания записи" itemprop="dateCreated datePublished" datetime="2016-01-20T00:09:35+08:00">
+                2016-01-20
+              </time>
+            
+
+            
+
+            
           </span>
 
           
@@ -316,9 +533,9 @@
           
             
               <span class="post-comments-count">
-                &nbsp; | &nbsp;
+                <span class="post-meta-divider">|</span>
                 <a href="/2016/01/20/告白/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/01/20/告白/" itemprop="commentsCount"></span>
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/01/20/告白/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -328,6 +545,11 @@
 
           
           
+
+          
+
+          
+
         </div>
       </header>
     
@@ -341,17 +563,22 @@
       
         
           
-            <p>你说下午看了一部电影叫 《告白》</p>
-<p>满分100分 今晚这表现我给自己打10分。。。</p>
-<p>感谢包容</p>
-<p>不管了，更新博客以示庆祝！</p>
-<hr>
+            <hr>
 <p><img src="http://7teagv.com1.z0.glb.clouddn.com/20120422200204_4QSzj.jpeg" alt=""></p>
 
           
         
       
     </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
 
     <footer class="post-footer">
       
@@ -370,13 +597,26 @@
       
 
   
-  
 
   
   
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2015/06/17/半导体存储器/">
+
+  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="yzxia">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="http://7teagv.com1.z0.glb.clouddn.com/ST.jpg">
+  </span>
+
+  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="yzxia's fishpond">
+    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+      <img style="display:none;" itemprop="url image" alt="yzxia's fishpond" src="">
+    </span>
+  </span>
 
     
       <header class="post-header">
@@ -398,13 +638,19 @@
 
         <div class="post-meta">
           <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2015-06-17T20:44:18+08:00" content="2015-06-17">
-              2015-06-17
-            </time>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              <time title="Дата создания записи" itemprop="dateCreated datePublished" datetime="2015-06-17T20:44:18+08:00">
+                2015-06-17
+              </time>
+            
+
+            
+
+            
           </span>
 
           
@@ -412,9 +658,9 @@
           
             
               <span class="post-comments-count">
-                &nbsp; | &nbsp;
+                <span class="post-meta-divider">|</span>
                 <a href="/2015/06/17/半导体存储器/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/06/17/半导体存储器/" itemprop="commentsCount"></span>
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/06/17/半导体存储器/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -424,6 +670,11 @@
 
           
           
+
+          
+
+          
+
         </div>
       </header>
     
@@ -509,6 +760,15 @@
       
     </div>
 
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+
     <footer class="post-footer">
       
 
@@ -526,13 +786,26 @@
       
 
   
-  
 
   
   
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2014/12/25/My-New-Post/">
+
+  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="yzxia">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="http://7teagv.com1.z0.glb.clouddn.com/ST.jpg">
+  </span>
+
+  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="yzxia's fishpond">
+    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+      <img style="display:none;" itemprop="url image" alt="yzxia's fishpond" src="">
+    </span>
+  </span>
 
     
       <header class="post-header">
@@ -544,8 +817,8 @@
             
               
                 
-                <a class="post-title-link" href="/2015/05/11/结束一段感情/" itemprop="url">
-                  结束一段感情
+                <a class="post-title-link" href="/2014/12/25/My-New-Post/" itemprop="url">
+                  My New Post
                 </a>
               
             
@@ -554,32 +827,37 @@
 
         <div class="post-meta">
           <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2015-05-11T01:27:27+08:00" content="2015-05-11">
-              2015-05-11
-            </time>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              <time title="Дата создания записи" itemprop="dateCreated datePublished" datetime="2014-12-25T20:35:35+08:00">
+                2014-12-25
+              </time>
+            
+
+            
+
+            
           </span>
 
           
             <span class="post-category" >
-              &nbsp; | &nbsp;
+              <span class="post-meta-divider">|</span>
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
               <span class="post-meta-item-text">分类于</span>
               
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/随笔/" itemprop="url" rel="index">
-                    <span itemprop="name">随笔</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/test/" itemprop="url" rel="index">
+                    <span itemprop="name">test</span>
                   </a>
                 </span>
 
                 
                 
-
               
             </span>
           
@@ -587,9 +865,9 @@
           
             
               <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2015/05/11/结束一段感情/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/05/11/结束一段感情/" itemprop="commentsCount"></span>
+                <span class="post-meta-divider">|</span>
+                <a href="/2014/12/25/My-New-Post/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2014/12/25/My-New-Post/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -599,6 +877,11 @@
 
           
           
+
+          
+
+          
+
         </div>
       </header>
     
@@ -612,21 +895,20 @@
       
         
           
-            <p>以前觉得这一定是一件艰难的事情，现在看来也不都是想象的那样。作为逃离的那个，解脱而又内疚。心里有这样的想法也有一段时间了，最后说出来也算是一个了结，自己没办法完全投入和付出，长痛不如短痛。</p>
-<p>没办法像c对我那样对她一样好，感情渐渐变成负担，自己也不想去交流。c喜欢我更多 我却有所保留，我没有那么喜欢c，和c在一起更多是一种陪伴的感觉，并没有让我觉得很excited，没有想要投入更多感情的冲动，也许最开始就有隐患，自己还是做了一个错误的决定。<br>想想当初在一起的时候，自己也有过那么久的犹豫，一个喜欢自己的人 一个好相处好交流的人，怎么看都是一段理想的关系。事实证明并不是，感情好的时候可以相安无事，开心地一起旅行；到了低谷，没有那么深的喜欢 没有要继续下去的决心，作为男友的责任就全抛到脑后了。<br>辜负了一个女孩的好意，要是遇到合适的人我想c一定会很幸福，可惜我并不是。</p>
-<p><strong>理想的伴侣关系</strong></p>
-<ul>
-<li>欣赏 喜欢</li>
-<li>交流 理解 包容</li>
-<li>相互促进提高</li>
-</ul>
-<p>我觉得我可能是一个比较追求完美的人，希望自己能不断进步，那时候的dw总能给我这种感觉，感情中的“失败”，之后的各种不认同，反而成了“迫使我进步的因素”，可能这是人的一种逆反心理，即俗称的“犯贱”，其实只是跟自己过不去。</p>
-<p>自己在伴侣关系中扮演什么样的角色，要承担什么样的责任，都要基于全部感情的投入。渴望两情相悦的感情，也想要和更好的人在一起，总归还是对现状不满意，趁着年轻自己还要多加油，希望到了两三年后又是一个很不一样的自己，对于喜欢的人不会因为自己实力不济而有遗憾吧。</p>
-
+            
           
         
       
     </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
 
     <footer class="post-footer">
       
@@ -642,694 +924,9 @@
 
 
     
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2015/05/04/中亚电子书导入Kindle5/" itemprop="url">
-                  中亚电子书导入Kindle5
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2015-05-04T19:25:23+08:00" content="2015-05-04">
-              2015-05-04
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/应用/" itemprop="url" rel="index">
-                    <span itemprop="name">应用</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2015/05/04/中亚电子书导入Kindle5/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/05/04/中亚电子书导入Kindle5/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>自从kindle人社区挂了重开之后取消了资源分享，有些找不到的书只有在亚马逊上买了。当初买的是美版的kindle5，国内亚马逊的书无法推送(仅支持kpw,kpw2)。如果买了<strong>中国亚马逊</strong>的kindle电子书，可以利用<strong>Calibre的插件去除DRM保护</strong>之后放到kindle5里。</p>
-<h1 id="软件安装">软件安装</h1><p>需要下载的软件有：<a href="http://calibre-ebook.com/download" target="_blank" rel="external">Calibre</a>、<a href="https://github.com/psyrendust/dedrm-ebook-tools/releases" target="_blank" rel="external">DeDRM插件</a>、<a href="https://www.amazon.cn/gp/digital/fiona/kcp-landing-page?ie=UTF8&amp;ref_=kcp_pc_mkt_lnd" target="_blank" rel="external">Kindle for PC</a></p>
-<p>安装完成<a href="http://calibre-ebook.com/download" target="_blank" rel="external">Calibre</a>之后， 进入<a href="https://github.com/psyrendust/dedrm-ebook-tools/releases" target="_blank" rel="external">DeDRM插件</a>页面，下载<code>Source code (zip)</code>，解压之后在如下进入如下目录：</p>
-<pre><code>dedrm-ebook-tools-<span class="number">6.0</span>.<span class="number">4</span><span class="string">\DeDRM_calibre_plugin\</span>
-</code></pre><p>里面<code>DeDRM_plugin.zip</code>就是插件包</p>
-<p>打开Calibre，点击首选项（或者快捷键Ctrl+P），点击高级选项下的插件，点击“从文件加载插件”，选择<code>DeDRM_plugin.zip</code>。如果有警告可以忽略，之后重启Calibre，插件就算安装完了。</p>
-<p>然后下载安装<a href="https://www.amazon.cn/gp/digital/fiona/kcp-landing-page?ie=UTF8&amp;ref_=kcp_pc_mkt_lnd" target="_blank" rel="external">Kindle for PC</a></p>
-<h1 id="导入电子书">导入电子书</h1><p>在中国亚马逊上买了电子书之后，用同一个帐号登录<strong>Kindle for PC</strong>，打开<strong>Kindle for PC</strong>接受中国亚马逊的推送，收到的电子书可以在菜单栏的 <code>工具-&gt;选项-&gt;内容</code> 处查看存放位置，此时为加密的azw文件。</p>
-<p><strong>去除DRM保护</strong><br>将接受的azw文件添加到Calibre之后插件可以自动产生已解除DRM保护的awz3文件，打开Calire右侧的<code>路径:    点击打开</code>找到存放位置，之后用usb传到Kindle里面就OK了~</p>
-
-          
-        
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2015/04/29/一篇随笔/" itemprop="url">
-                  四月奋进小组
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2015-04-29T00:39:28+08:00" content="2015-04-29">
-              2015-04-29
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/随笔/" itemprop="url" rel="index">
-                    <span itemprop="name">随笔</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2015/04/29/一篇随笔/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/04/29/一篇随笔/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>blog好久没更新，kindle好久没看了，有时候觉得时间过得好快，几个月自己什么也没做，又感觉过得好慢，想早点入职 进入一个固定的节奏，免得自己让自己颓废。我也觉得闲暇的时间太多也不是好事，工作学习之余的时间才会觉得珍贵。</p>
-<p>软件训练营10天，重新温习了C，大一学的太浅，链表都不会用，vc6也不太会debug一直在走读代码定位，实战的时候每天晚上都回来看看学学，也有很多收获，最后考核也还顺利。我们的四月奋进小组，还有中午一起去软件园和南窑头吃饭的兄弟，还有一起打车回学校 坚持只打到西电然后坐916回去 早上7点就在北雷村等我们的西工大的哥们，不管到了深圳还是西安希望一切都好。前几天通知了部门，分到了存储，感觉可能要向linux c发展了。以前老是在c和java之间纠结也不知道未来的方向。也没有什么偏好，就希望早点确定，也好全力去学习。</p>
-<p>动手开始毕设，cadence又装上了，每次卸了都感觉不会再装了，结果又是打脸=，=。一直觉得下不去手 不知道怎么写，也许开始动手就好了，水到渠成。dota2骨弓有句台词：与其感慨路难行,不如马上行动！很多时候并不是什么难事，但是未来的不确定总是让我有点担忧，怕没有提前做准备，怕努力错了方向，大一大二想着大四时候的事，毕业之前想着工作的事 后来却发现计算的太多也赶不上变化。也许我该多着眼做好当下的事 而不是手头的事都没做好 却常常又开始想象以后的事了，这样并没有什么有益的帮助，反而让自己忧心忡忡。基于现有的确定的信息做判断 做实事，少一点空泛的YY。</p>
-<p>感情的事，过了新鲜感的时候，变得平淡。不知道以后会怎样，希望过得开心最重要，对你也是一样，话说其实我还是挺信星座的。自己被爱的更多，感觉自己给予的关心不够 照顾不够多，希望妹子能多对自己好一点，期望越大，才会付出更多吧，总觉得好多东西自己给不了你。我的感情观大概是那种觉得在一起能让彼此过得更好而在一起。朋友到恋人有时候压力更多了，不知道以后会怎样呢，先度过异地这段时间，但愿一切顺利。</p>
-
-          
-        
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2015/01/07/hexoMthJax插件/" itemprop="url">
-                  hexoMthJax插件
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2015-01-07T13:51:18+08:00" content="2015-01-07">
-              2015-01-07
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/应用/" itemprop="url" rel="index">
-                    <span itemprop="name">应用</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2015/01/07/hexoMthJax插件/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/01/07/hexoMthJax插件/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h2 id="安装：">安装：</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-math --save</span><br></pre></td></tr></table></figure>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2015/01/07/hexoMthJax插件/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2015/01/07/74ac11008_4_and 设计报告/" itemprop="url">
-                  74ac11008_4_and 设计报告
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2015-01-07T13:48:07+08:00" content="2015-01-07">
-              2015-01-07
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/课程设计/" itemprop="url" rel="index">
-                    <span itemprop="name">课程设计</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2015/01/07/74ac11008_4_and 设计报告/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/01/07/74ac11008_4_and 设计报告/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h2 id="电路设计">电路设计</h2><h3 id="设计目标">设计目标</h3><p>以所选Ti公司7474ac11008_4_and 为设计目标，利用所学《数字电子线路》知识完成逻辑设计，应用《数字集成电路》知识完成电路设计，计算器件参数（W/L），完成电路仿真，
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2015/01/07/74ac11008_4_and 设计报告/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2014/12/31/hexo字体调用/" itemprop="url">
-                  hexo字体调用
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2014-12-31T17:55:17+08:00" content="2014-12-31">
-              2014-12-31
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/应用/" itemprop="url" rel="index">
-                    <span itemprop="name">应用</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2014/12/31/hexo字体调用/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2014/12/31/hexo字体调用/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p>回家之后进blog很慢 <code>fonts.googleapis.com</code>加载不出来</p>
-<p>后来发现landscape主题里使用了<code>fonts.googleapis.com</code>字体 导致网页加载慢
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2014/12/31/hexo字体调用/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2014/12/29/关于2014/" itemprop="url">
-                  关于2014
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2014-12-29T00:00:00+08:00" content="2014-12-29">
-              2014-12-29
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/随笔/" itemprop="url" rel="index">
-                    <span itemprop="name">随笔</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2014/12/29/关于2014/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2014/12/29/关于2014/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p>从狗一样的大三到猪一样的大四，这就是我的2014。今年满20开始奔三了，退出了德语班，也没有上研，选择了回成都工作，很多事情也算告一段落，告别了微电子行业，从硅工变成了一名准码农，开始进入一个新的阶段。</p>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2014/12/29/关于2014/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-
   </section>
 
   
-  <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
-  </nav>
-
 
 
           </div>
@@ -1357,7 +954,7 @@
 
       
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel sidebar-panel-active">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="http://7teagv.com1.z0.glb.clouddn.com/ST.jpg"
@@ -1368,24 +965,28 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">11</span>
+              <span class="site-state-item-count">5</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
 
-          <div class="site-state-item site-state-categories">
-            
-              <span class="site-state-item-count">4</span>
-              <span class="site-state-item-name">分类</span>
+          
+            <div class="site-state-item site-state-categories">
               
-          </div>
+                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-name">分类</span>
+              
+            </div>
+          
 
-          <div class="site-state-item site-state-tags">
-            <a href="/tags">
-              <span class="site-state-item-count">8</span>
-              <span class="site-state-item-name">标签</span>
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-name">标签</span>
               </a>
-          </div>
+            </div>
+          
 
         </nav>
 
@@ -1395,26 +996,29 @@
           
             
               <span class="links-of-author-item">
-                <a href="http://weibo.com/woolader" target="_blank">
+                <a href="http://weibo.com/woolader" target="_blank" title="微博">
                   
-                    <i class="fa fa-globe"></i> 微博
+                    <i class="fa fa-fw fa-globe"></i>
                   
+                  微博
                 </a>
               </span>
             
               <span class="links-of-author-item">
-                <a href="http://www.zhihu.com/people/xia-yu-zhe" target="_blank">
+                <a href="http://www.zhihu.com/people/xia-yu-zhe" target="_blank" title="知乎">
                   
-                    <i class="fa fa-globe"></i> 知乎
+                    <i class="fa fa-fw fa-globe"></i>
                   
+                  知乎
                 </a>
               </span>
             
               <span class="links-of-author-item">
-                <a href="http://www.douban.com/people/yzxia/" target="_blank">
+                <a href="http://www.douban.com/people/yzxia/" target="_blank" title="豆瓣">
                   
-                    <i class="fa fa-globe"></i> 豆瓣
+                    <i class="fa fa-fw fa-globe"></i>
                   
+                  豆瓣
                 </a>
               </span>
             
@@ -1424,9 +1028,11 @@
         
         
 
-        <div class="links-of-author motion-element">
-          
-        </div>
+        
+        
+
+        
+
 
       </section>
 
@@ -1447,13 +1053,14 @@
   &copy;  2014 - 
   <span itemprop="copyrightYear">2016</span>
   <span class="with-love">
-    <i class="icon-next-heart fa fa-heart"></i>
+    <i class="fa fa-heart"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">yzxia</span>
 </div>
 
+
 <div class="powered-by">
-  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
 </div>
 
 <div class="theme-info">
@@ -1464,58 +1071,81 @@
 </div>
 
 
+        
 
+        
       </div>
     </footer>
 
-    <div class="back-to-top"></div>
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
   </div>
 
   
 
-
-  
-
-
-
-  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
-
-  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-
-  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-
-  <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
-
-  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
-
-  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/utils.js?v=0.5.0"></script>
-
-  <script type="text/javascript" src="/js/src/motion.js?v=0.5.0"></script>
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
 
 
 
-  
-  
 
 
-  <script type="text/javascript" src="/js/src/affix.js?v=0.5.0"></script>
 
-  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=0.5.0"></script>
 
 
 
   
 
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
   
 
 
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=0.5.0"></script>
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.0"></script>
+
+
+
+  
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
 
 
 
@@ -1540,16 +1170,27 @@
 
   
     
+    
+    <script src="/lib/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+    <script src="/js/src/hook-duoshuo.js"></script>
   
 
 
 
 
 
+
+
+
   
   
 
   
+
+  
+
+  
+
   
 
 
